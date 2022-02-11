@@ -1,0 +1,137 @@
+1. Accept a numeric array datafor 5 numbersandfind the largest number.
+
+package Assignmentno1;
+
+import java.util.Scanner;
+
+public class Assignmentno1q1 {
+
+    public static void main(String[] args) {
+
+        int n, max;
+        Scanner s = new Scanner(System.in);
+        System.out.print("Enter the number of elements in the array:");
+        n = s.nextInt();
+        int a[] = new int[n];
+        
+        for(int i = 0; i < n; i++) {
+        	a[i] = s.nextInt();
+        }
+        
+        max = a[0];
+        
+        for(int i = 0; i < n; i++) {
+        	if(max < a[i]) {
+        		max = a[i];
+        	}
+        }
+        System.out.println("Maximum value in the array is:" + max);
+    }
+}
+
+
+
+2. Create methods to find the cube and square of a given number.
+
+package Assignmentno1;
+
+import java.util.*;
+
+public class Assignmentno1q2 {
+
+	public static void main(String[] args) {
+	
+        Scanner sc = new Scanner(System.in);
+        int num;
+
+        System.out.print("Enter an integer number: ");
+        num = sc.nextInt();
+
+        System.out.println(num + " Squared is " + Math.pow(num, 2));
+        System.out.println(num + " Cubed is " + Math.pow(num, 3));
+    }
+}
+
+
+
+3. Create a method to swap two numbers.
+
+package Assignmentno1;
+
+public class Assignmentno1q3 {
+
+    public static void SwapNumber(int num1, int num2) {
+
+        int x = num1;
+        int y = num2;
+        int temp = 0;
+        System.out.println("Before Swap");
+        System.out.println("the value of x is: " + x);
+        System.out.println("the value of y is: " + y);
+
+        temp = x;
+        x = y;
+        y = temp;
+        System.out.println("After Swap");
+        System.out.println("the value of x is: " + x);
+        System.out.println("the value of y is: " + y);
+
+    }
+
+    public static void main(String[] args) {
+
+        int x = 5;
+        int y = 10;
+        SwapNumber(x, y);
+
+    }
+}
+
+4. Write the switch case construct perform the calculations.
+
+package Assignmentno1;
+
+import java.util.Scanner;
+
+public class Assignmentno1q4 {
+
+    public static void main(String[] args) {
+
+        Scanner sc = new Scanner(System.in);
+
+
+        while (true) {
+
+            System.out.print("Enter 1st number:");
+            int num1 = sc.nextInt();
+            System.out.print("Enter 2nd number:");
+            int num2 = sc.nextInt();
+
+            System.out.print("What operation? (x if quit)");
+            char operation = sc.next().charAt(0);
+
+            switch (operation) {
+            case '+':
+                int sum = num1 + num2;
+                System.out.println("the sum of two numbers: "+ sum);
+                break;
+            case '-':
+                int diff = num1 - num2;
+                System.out.println("the difference of two numbers: "+ diff);
+                break;
+            case '*':
+                int product = num1 * num2;
+                System.out.println("the product of two numbers: "+ product);
+                break;
+            case '/':
+                int quotient = num1 / num2;
+                System.out.println("the quotient of two numbers: "+ quotient);
+                break;
+            case 'x':
+                System.out.println("Thank you for trying!");
+                System.exit(0);
+            }
+        	}
+
+    }
+}
